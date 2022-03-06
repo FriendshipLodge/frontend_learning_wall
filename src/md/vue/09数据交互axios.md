@@ -1,16 +1,7 @@
-<template>
-  <div id="app">
-      <h1>插槽</h1>
-  </div>
-</template>
-
-<script>
-import axios from 'axios'
-export default {
-  data(){
-    return {
-    }
-  },
+## axios
+    引入：import axios from "axios"
+    
+```vue
   methods:{
     getUserInfoAll(){
       axios.post("http://localhost:8081/v1/allUserInfo").then(res=>{
@@ -21,10 +12,4 @@ export default {
   created() {
     this.getUserInfoAll()
   }
-
-}
-</script>
-
-<style>
-
-</style>
+```
