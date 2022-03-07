@@ -14,6 +14,7 @@ export default {
   methods:{
     getUserInfoAll(){
       axios.post("http://localhost:8081/v1/allUserInfo").then(res=>{
+
            console.log(res.data)
       })
     }
