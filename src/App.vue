@@ -1,7 +1,29 @@
 <template>
+
   <div id="app">
-      <h1>插槽</h1>
+    <router-link to="">首页</router-link>
+    <router-link to="">博客</router-link>
+    <router-link to="">个人</router-link>
+    <div id="top">
+
+      <h1>上部分</h1>
+
+    </div>
+
+    <div id="middle">
+
+      <h1>中部分</h1>
+
+    </div>
+
+    <div id="bottom">
+
+      <h1>下部分</h1>
+
+    </div>
+
   </div>
+
 </template>
 
 <script>
@@ -25,7 +47,10 @@ export default {
 
 }
 </script>
-
 <style>
-
+#top{
+  color: aquamarine;
+  background: black;
+  margin-top: 0;
+}
 </style>

@@ -1,0 +1,35 @@
+name: Docker Image Build And Push
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+    env:
+      IMAGE_NAME: 'fl_frontend_learning_wall'
+      VERSION: 'latest'
+      TOKEN: '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' # ${{secrets.TOKEN}}
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Login Github
+      run: echo '=====登录Github====='
+        && echo $TOKEN | docker login ghcr.io -u friendshiplodge --password-stdin
+        && echo '=====成功登录Github=='
+
+    - name: Build the Docker image
+      run: echo '=====开始构建镜像====='
+        && docker build -t ghcr.io/friendshiplodge/$IMAGE_NAME:$VERSION .
+        && echo '=====构建镜像完成====='
+
+    - name: Push the Docker image
+      run: echo '=====开始上传镜像====='
+        && docker push ghcr.io/friendshiplodge/$IMAGE_NAME:$VERSION
+        && echo '=====镜像上传完成====='
