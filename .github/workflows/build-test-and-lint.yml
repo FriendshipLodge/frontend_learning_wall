@@ -18,4 +18,5 @@ jobs:
           cache: 'npm'
 #      - run: npm build
 #      - run: npm test
-      - run: npm lint
+#      - run: npm lint
+      - run: "Ö´ĞĞÍê±Ï"
