@@ -1,4 +1,4 @@
-FROM Nodejs
+FROM ubuntu
 
 MAINTAINER gaoyang gaoyangbenyang@outlook.com
 
