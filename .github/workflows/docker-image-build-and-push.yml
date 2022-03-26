@@ -14,7 +14,7 @@ jobs:
     env:
       IMAGE_NAME: 'fl_frontend_learning_wall'
       VERSION: 'latest'
-      TOKEN: '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'
+      TOKEN: ${{secrets.TOKEN}}
 
     steps:
     - uses: actions/checkout@v2
